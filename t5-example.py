@@ -6,7 +6,7 @@ def main():
 
     summarizer = pipeline(
         task="summarization",
-        model="t5-small",
+        model='UrukHan/t5-russian-summarization',
         min_length=20,
         max_length=40,
         truncation=True,
@@ -16,7 +16,6 @@ def main():
     # User input
     input_text = st.text_area("Enter the text you want to summarize:", height=200)
 
-    # Summarize button
     if st.button("Summarize"):
         if input_text:
             # Generate the summary
